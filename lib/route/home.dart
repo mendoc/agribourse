@@ -296,7 +296,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         autoPlay: false),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 20.0),
+                    padding: const EdgeInsets.only(
+                        left: 16.0, right: 16.0, bottom: 20.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(20.0)),
                       child: MaterialButton(
@@ -307,11 +308,36 @@ class _HomeScreenState extends State<HomeScreen> {
                         onPressed: () {},
                         child: Text(
                           "Tous les produits",
-                          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, fontFamily: "Raleway"),
+                          style: TextStyle(
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Raleway"),
                         ),
                       ),
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: 50.0,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      TitreSection(titre: "VENTE"),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            top: 0.0, bottom: 16.0, left: 60.0, right: 16.0),
+                        child: Texte(
+                          data[0],
+                          fontSize: 14.0,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        child: Image.network(
+                            "https://raw.githubusercontent.com/Dareich241/agridata/master/assets/img/camembert.png"),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ],
