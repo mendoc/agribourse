@@ -338,6 +338,47 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
+                  SizedBox(
+                    height: 50.0,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      TitreSection(titre: "PRATIQUES & HABITUDES"),
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            top: 0.0, bottom: 16.0, left: 60.0, right: 16.0),
+                        child: Texte(
+                          data[0],
+                          fontSize: 14.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: double.infinity,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        ClipOval(
+                          child: Image.asset(
+                            "assets/img/cultiver.jpg",
+                            height: 100,
+                            width: 100,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 20.0),
+                          child: Texte(
+                            "Il existe plusieurs sources de pollution potentielles quand nous cultivons en ville. Cependant, les pollutions sont maitrisables sur base de certaines bonnes pratiques (liens vers ci-dessous) et mesures de prévention.",
+                            fontSize: 15.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ],
