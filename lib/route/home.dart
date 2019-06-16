@@ -239,7 +239,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           child: Image.network(
                                         img_produits[i - 1],
                                         height: 200,
-                                        fit: BoxFit.fitHeight,
+                                        fit: BoxFit.fill,
                                       )),
                                     ),
                                     ClipRRect(
@@ -294,6 +294,23 @@ class _HomeScreenState extends State<HomeScreen> {
                         }).toList(),
                         height: 200,
                         autoPlay: false),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 20.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      child: MaterialButton(
+                        elevation: 5.0,
+                        height: 50.0,
+                        minWidth: double.infinity,
+                        color: marron,
+                        onPressed: () {},
+                        child: Text(
+                          "Tous les produits",
+                          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold, fontFamily: "Raleway"),
+                        ),
+                      ),
+                    ),
                   )
                 ],
               ),
